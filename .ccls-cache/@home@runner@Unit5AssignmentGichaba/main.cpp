@@ -9,6 +9,8 @@ using namespace std;
 
 double weeklyPay(double, double, string, int);// function prototype
 
+void capitalizeName(string);
+void lowercaseName(string);
 int main()
 {
     //a function call for each person - no input from the console for part 1
@@ -20,6 +22,9 @@ int main()
     cout << weeklyPay(25.0, 15.0, "Eldridge", 2) << endl;
     cout << weeklyPay(55.0, 203.50, "Freedom", 1) << endl;
     cout << weeklyPay(32.5, 100.25, "Tyson", 1) << endl;
+    capitalizeName("i will succeed at c++"); 
+    cout<<endl;
+    lowercaseName("TCC-TR IS COOL");
 
     return 0;
 }
@@ -99,4 +104,19 @@ double weeklyPay(double hours, double rate, string name, int empType)
     cout << "NET PAY for " << name << " " << color << "$";
 
     return netPay;
+}
+
+void capitalizeName(string empName)
+{
+for (int val : empName)
+{
+putchar(toupper(val));
+}
+}
+void lowercaseName(string empName)
+{
+  for(int val : empName)
+  {
+    putchar(tolower(val));
+  }
 }
